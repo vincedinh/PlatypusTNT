@@ -1,0 +1,84 @@
+<!-- Written by Vince Dinh from modified ColoredPoints.html of the Matsuda 2012 text  -->
+<!-- CSE 160, Professor James Davis @ UCSC, Fall 2021 -->
+<!-- Harry at the Factory -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Explore a Lighted 3D World</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p id="numdot"> Program performance will be stated here. </p>
+
+    <p id="title"> Harry the Platypus in a Lighted World </p>
+    <p id="instr"> Use the arrow keys to explore and Q and E to pan left and right. </p>
+    <p id="lightingnote"> NOTE: Spotlight must be turned off before light can be turned off. Spotlight overrides light specular; I'll figure out how to combine effects of lighting later. </p>
+
+    <button type="button" id="NormalsOn">Normals On</button> <button type="button" id="NormalsOff">Normals Off</button>
+    <br>
+    
+    <br>
+    Light: <button type="button" id="lightOn">On</button> <button type="button" id="lightOff">Off</button>
+    <br>
+    <br>
+    Spotlight: <button type="button" id="spotlightOn">On</button> <button type="button" id="spotlightOff">Off</button>
+    <br>
+
+    <br>
+    Light X: <input type = "range" min="-250" max="250" value="220" class="slider" id="lightSlideX">
+    Light Y: <input type = "range" min="-250" max="250" value="0" class="slider" id="lightSlideY">
+    Light Z: <input type = "range" min="-250" max="250" value="0" class="slider" id="lightSlideZ">
+    <br>
+
+    <br>
+    Head Animation: <button type="button" id="headAnimOn">ON</button> <button type="button" id="headAnimOff">OFF</button>
+    <br>
+    Head Angle: <input type = "range" min="-45" max="45" value="0" class="slider" id="headAngle">
+    <br>
+
+    <br>
+    Legs Animation: <button type="button" id="legsAnimOn">ON</button>  <button type="button" id="legsAnimOff">OFF</button>
+    <br>
+    Right Legs Angle: <input type = "range" min="-10" max="10" value="0" class="slider" id="rightLegsAngle">
+    <br>
+    Left Legs Angle: <input type = "range" min="-10" max="10" value="0" class="slider" id="leftLegsAngle">
+    <br>
+
+    <br>
+    Flippers (2nd leg joint) Animation: <button type="button" id="flipAnimOn">ON</button>  <button type="button" id="flipAnimOff">OFF</button>
+    <br>
+    Right Flippers Angle: <input type = "range" min="-270" max="0" value="0" class="slider" id="rightFlippersAngle">
+    <br>
+    Left Flippers Angle: <input type = "range" min="-270" max="0" value="0" class="slider" id="leftFlippersAngle">
+    <br>
+
+    <br>
+    Tail Animation: <button type="button" id="tailAnimOn">ON</button>  <button type="button" id="tailAnimOff">OFF</button>
+    <br>
+    Tail Angle: <input type = "range" min="-10" max="10" value="0" class="slider" id="tailAngle">
+    <br>
+
+    <br>
+    Camera Angle: <input type = "range" min="0" max="360" value="30" class="slider" id="angleSlide">
+    <br>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <!-- <script src="../lib/cuon-matrix.js"></script> -->
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Camera.js"></script>
+    <script src="World.js"></script>
+    
+  </body>
+</html>
